@@ -1,5 +1,6 @@
+# GAN Augmentation to improve Classification Performance
 
-# Issue
+## Issue
 
 의료 분야의 특성 상 데이터 개방성이 낮고 절대적인 데이터의 수가 부족하다. 의료 데이터는 특유의 민감성 때문에 반드시 연구에 필요한 최소 수준의 데이터 요청 및 폐쇄된 환경에서만 활용이 가능해 데이터 접근이 매우 제한적이다. 양질의 데이터를 확보하는 데에도 한계가 있다. 질병의 특성 때문에 데이터 자체가 희귀하거나 데이터가 특정 그룹에 편향되어 있어 데이터 불균형 문제가 발생한다. 예시로 질병으로 분류(Classification)되는 데이터는 전체 데이터의 극히 일부만을 차지한다.
 
@@ -11,7 +12,7 @@
 
 본 연구는 절대적으로 부족한 의료 데이터에 여러 GAN을 적용하여 Data Augmentation을 진행한다. 이를 통해 의료 데이터 분류(Classification) 모델의 성능을 향상 시키고자 한다. 더 나아가 의료 데이터와 같은 특성을 가진 유사 분야에 본 연구 방식을 적용하여 문제를 해결할 수 있다.
 
-# Dataset
+## Dataset
 
 본 연구에서 사용한 데이터셋은 Kaggle의 Skin Cancer Image 데이터로 benign(양성)과 malignant(악성) 종양 image 이진 분류를 목적으로 사용되는 데이터셋이다.  
 
@@ -30,7 +31,7 @@ Test data: Benign (360장), Malignant (300장)
 
 </aside>
 
-# Experiment Environment
+## Experiment Environment
 
 ### S**cenario**
 
@@ -61,9 +62,9 @@ Test data: Benign (360장), Malignant (300장)
         ![Untitled](images/t3.png)
 
 
-# 4) GAN Augmentation
+## 4) GAN Augmentation
 
-## InfoGAN
+### InfoGAN
 
 1. Number of training Images : 10, 50, 100, 200, 500
 2. Batch_size : 8, 16, 64, 128, 128
@@ -103,11 +104,11 @@ training 300 real malignant images
 
 training 500 real malignant images
 
-# InfoGAN Result
+## InfoGAN Result
 
 InfoGAN의 경우, original gan과 다른게 이산적이거나 연속적인 latent c값에 따라 image를 생성할 수 있다. 하지만, malignant 하나의 클래스로 augmentation했다는 점과 malignant image 자체에서 어떠한 연속적인 feature가 있는지 일반인은 판단하기 어렵다는 점을 고려하여 적합하지 않음을 알 수 있다. 이미지 화질의 개선이 필요할 뿐만 아니라, 다른 최신 GAN에 비해 성능이 떨어진다.
 
-# Classification Result
+## Classification Result
 
 - 아래의 표는 본 연구의 실험 결과이다.
 - 열의 10, 50, 100, 200, 250, 300, 500, All images은 학습에 사용된 real image 개수이다.
@@ -122,7 +123,7 @@ InfoGAN의 경우, original gan과 다른게 이산적이거나 연속적인 lat
 
 ---
 
-# 참고 자료
+## 참고 자료
 
 [ 데이터 셋 ] : [https://www.kaggle.com/fanconic/skin-cancer-malignant-vs-benign](https://www.kaggle.com/fanconic/skin-cancer-malignant-vs-benign)
 
