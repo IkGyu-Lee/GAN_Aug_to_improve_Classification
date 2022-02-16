@@ -123,8 +123,8 @@ InfoGAN의 경우, original gan과 다른게 이산적이거나 연속적인 lat
 
 ---
 
-## 참고 자료
+## Reference
 
-[ 데이터 셋 ] : [https://www.kaggle.com/fanconic/skin-cancer-malignant-vs-benign](https://www.kaggle.com/fanconic/skin-cancer-malignant-vs-benign)
+[ Dataset ] : [https://www.kaggle.com/fanconic/skin-cancer-malignant-vs-benign](https://www.kaggle.com/fanconic/skin-cancer-malignant-vs-benign)
 
 [ classification model ] : [https://www.kaggle.com/puff1n/classification-with-pytorch-85acc](https://www.kaggle.com/puff1n/classification-with-pytorch-85acc)
